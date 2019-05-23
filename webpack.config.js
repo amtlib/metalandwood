@@ -9,6 +9,9 @@ module.exports = {
         path: path.resolve(__dirname, 'build'),
         filename: 'app.build.js'
     },
+    devServer: {
+        watchContentBase: true
+    },
     module: {
         rules: [
             {
@@ -18,7 +21,18 @@ module.exports = {
                 options:{
                     presets: ['@babel/preset-env']
                 }
-            }
+            },
+            {
+                test: /\.(ttf|eot|svg|woff(2)?)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+                loader: "url-loader?limit=80000"
+            },
+            {
+                test: /\.css$/,
+                use: [
+                    'style-loader',
+                    'css-loader'
+                ]
+            },
         ]
     }
 }

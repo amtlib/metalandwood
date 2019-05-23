@@ -1,2 +1,2 @@
-const data = [1,2,5].map(ele => ele**2)
-console.log(data)
+import 'materialize-css/dist/css/materialize.min.css'
+import M from 'materialize-css/dist/js/materialize.min.js'
