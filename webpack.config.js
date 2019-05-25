@@ -10,7 +10,8 @@ module.exports = {
         filename: 'app.build.js'
     },
     devServer: {
-        watchContentBase: true
+        host: '0.0.0.0',
+        watchContentBase: true,
     },
     module: {
         rules: [
@@ -27,10 +28,11 @@ module.exports = {
                 loader: "url-loader?limit=80000"
             },
             {
-                test: /\.css$/,
+                test: /\.?css$/,
                 use: [
                     'style-loader',
-                    'css-loader'
+                    'css-loader',
+                    'sass-loader'
                 ]
             },
         ]
