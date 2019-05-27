@@ -8,6 +8,7 @@ $light-color: #bfbfbf;
 
 
 body {
+    scroll-behavior: smooth;
     background-color: $light-color;
     font-family: 'Lato', sans-serif;
     font-size: 1.1em;
